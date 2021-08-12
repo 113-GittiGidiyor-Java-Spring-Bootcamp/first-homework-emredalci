@@ -43,8 +43,6 @@ public class Main {
 
     }
 
-
-
     private static int checkTestData() {
         EntityManager em = EntityManagerUtils.getEntityManager("mysqlPU");
 

@@ -34,8 +34,6 @@ public class StudentController {
         studentService.deleteStudentFromDatabase(id);
     }
 
-    public List<Course> findCoursesByStudentId(int id) {
-        return studentService.findCoursesByStudentId(id);
-    }
+
 
 }
