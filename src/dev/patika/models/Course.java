@@ -12,16 +12,24 @@ public class Course {
     //instance variables
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private int id;
+
+    @Column(name = "course_name")
     private String courseName;
+
+    @Column(name="course_code")
     private String courseCode;
+
+    @Column(name = "credit_score")
     private double creditScore;
 
     @ManyToMany(mappedBy = "courses")
     private List<Student> students = new ArrayList<>();
+    //https://www.baeldung.com/jpa-many-to-many
 
-    @ManyToOne
-    @JoinColumn(name = "instructor_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "instructor_id",nullable = false)
     private Instructor instructor;
 
 
@@ -36,6 +44,9 @@ public class Course {
     }
 
     //getters & setters
+
+
+
 
     public String getCourseName() {
         return courseName;

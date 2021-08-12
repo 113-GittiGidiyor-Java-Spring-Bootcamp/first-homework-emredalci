@@ -1,10 +1,14 @@
 package dev.patika.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import java.util.Objects;
 
+@Entity
 public class VisitingResearcher extends Instructor{
 
     //instance variables
+    @Column(name = "hourly_salary")
     private double hourlySalary;
 
     //constructors
@@ -18,6 +22,7 @@ public class VisitingResearcher extends Instructor{
     }
 
     //getters & setters
+
 
     public double getHourlySalary() {
         return hourlySalary;

@@ -1,10 +1,14 @@
 package dev.patika.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import java.util.Objects;
 
+@Entity
 public class PermanentInstructor extends Instructor{
 
     //instance variables
+    @Column(name = "fixed_salary")
     private double fixedSalary;
 
     //constructors
@@ -18,6 +22,8 @@ public class PermanentInstructor extends Instructor{
     }
 
     //getters & setters
+
+
 
     public double getFixedSalary() {
         return fixedSalary;
